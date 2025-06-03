@@ -1,0 +1,13 @@
+{
+  "name": "my-monorepo",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "concurrently \"pnpm --filter webapp-one dev\" \"pnpm --filter webapp-two dev\"",
+    "dev:webapp-one": "pnpm --filter webapp-one dev",
+    "dev:webapp-two": "pnpm --filter webapp-two dev"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
