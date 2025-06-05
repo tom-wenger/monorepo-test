@@ -4,9 +4,9 @@
   "compileOnSave": false,
   "compilerOptions": {
     "paths": {
-      "angular-wrapper": [
-        "./dist/angular-wrapper"
-      ]
+      "angular-wrapper": ["./dist/angular-wrapper"],
+      "stencil-library/components": ["../core/src/components.d.ts"],
+      "stencil-library/components/*": ["../core/dist/components/*"]
     },
     "outDir": "./dist/out-tsc",
     "strict": true,
