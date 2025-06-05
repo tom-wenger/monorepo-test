@@ -6,7 +6,7 @@
     "paths": {
       "angular-wrapper": ["./dist/angular-wrapper"],
       "stencil-library/components": ["../core/src/components.d.ts"],
-      "stencil-library/components/*": ["../core/dist/components/*"]
+      "stencil-library/components/*": ["../core/components/*"]
     },
     "outDir": "./dist/out-tsc",
     "strict": true,
