@@ -1,8 +1,8 @@
 /* tslint:disable */
 /* auto-generated angular directive proxies */
-import { ChangeDetectionStrategy, ChangeDetectorRef, Component, ElementRef, NgZone } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, ElementRef, EventEmitter, NgZone } from '@angular/core';
 
-import { ProxyCmp } from './angular-component-lib/utils';
+import { ProxyCmp, proxyOutputs } from './angular-component-lib/utils';
 
 import type { Components } from 'stencil-library/components';
 
@@ -21,13 +21,29 @@ import { defineCustomElement as defineMyComponent } from 'stencil-library/compon
 })
 export class MyComponent {
   protected el: HTMLMyComponentElement;
+    /**
+   * The first name
+   */
+  set first(_: Components.MyComponent['first']) {};
+    /**
+   * The middle name
+   */
+  set middle(_: Components.MyComponent['middle']) {};
+    /**
+   * The last name
+   */
+  set last(_: Components.MyComponent['last']) {};
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
     this.el = r.nativeElement;
+    proxyOutputs(this, this.el, ['out']);
   }
 }
 
 
-export declare interface MyComponent extends Components.MyComponent {}
+export declare interface MyComponent extends Components.MyComponent {
+
+  out: EventEmitter<CustomEvent<string>>;
+}
 
 

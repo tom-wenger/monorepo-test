@@ -26,6 +26,7 @@ export const config: Config = {
       outputType: 'standalone',
       directivesProxyFile: '../angular-workspace/projects/angular-wrapper/src/lib/stencil-generated/components.ts',
       // directivesArrayFile: '../angular-workspace/projects/angular-wrapper/src/lib/stencil-generated/index.ts',
+      inlineProperties: true,
     }),
   ],
   testing: {

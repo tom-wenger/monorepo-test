@@ -5,7 +5,9 @@
   "scripts": {
     "dev": "concurrently \"pnpm --filter webapp-one dev\" \"pnpm --filter webapp-two dev\"",
     "dev:webapp-one": "pnpm --filter webapp-one dev",
-    "dev:webapp-two": "pnpm --filter webapp-two dev"
+    "dev:webapp-two": "pnpm --filter webapp-two dev",
+    "pack:stencil": "cd packages/core && npm pack",
+    "pack:angular": "cd packages/angular-workspace/dist/angular-wrapper && npm pack"
   },
   "devDependencies": {
     "concurrently": "^9.1.2"
